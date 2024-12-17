@@ -1,0 +1,148 @@
+---
+title: "Statistical Model"
+format: html
+editor: visual
+---
+
+### Data & Libraries
+
+```{r}
+library(dplyr)
+library(ggplot2)
+library(readr)
+library(tidyr)
+
+data1 <- read.csv("Offender.csv")
+data2 <- read.csv("Victim.csv")
+data3 <- read.csv("Offender_ethnicity.csv")
+data4 <- read.csv("Victim_ethnicity.csv")
+data5 <- read.csv("Offender_race.csv")
+data6 <- read.csv("Victim_race.csv")
+data7 <- read.csv("Offender_sex.csv")
+data8 <- read.csv("Victim_sex.csv")
+data9 <- read.csv("Location.csv")
+data10 <- read.csv("Relationship.csv")
+data11 <- read.csv("Weapon.csv")
+data12 <- read.csv("Offense.csv")
+
+colnames(data2)
+
+data7_long <- data7 %>%
+  pivot_longer(
+    cols = everything(),          
+    names_to = "Sex",             
+    values_to = "Count"           
+  )
+
+data8_long <- data8 %>%
+  pivot_longer(
+    cols = everything(),          
+    names_to = "Sex",             
+    values_to = "Count"           
+  )
+```
+
+# Visualizations of the Ages of Offenders and Victims
+
+```{r, message=FALSE, warning=FALSE, fig.height=4, fig.width=12}
+# Offender Counts
+ggplot(data1, aes(x = key, y = value, fill = value)) + 
+  geom_bar(stat = "identity") +
+  labs(title = "Offender Age Distribution", x = "Offender Age", y = "Count") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# Victim Counts
+ggplot(data2, aes(x = key, y = value, fill = value)) + 
+  geom_bar(stat = "identity") +
+  labs(title = "Victim Age Distribution", x = "Victim Age", y = "Count") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+# Visualizations of Ethnicity
+
+```{r, message=FALSE, warning=FALSE, fig.height=4, fig.width=12}
+# Offender Ethnicity Counts
+ggplot(data3, aes(x = key, y = value, fill = value)) + 
+  geom_bar(stat = "identity") +
+  labs(title = "Offender Ethnicity Distribution", x = "Ethnicity", y = "Count") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# Victim Ethnicity Counts
+ggplot(data4, aes(x = key, y = value, fill = value)) + 
+  geom_bar(stat = "identity") +
+  labs(title = "Victim Ethnicity Distribution", x = "Ethnicity", y = "Count") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+# Visualizations of Race
+
+```{r, message=FALSE, warning=FALSE, fig.height=4, fig.width=12}
+# Offender Race Counts
+ggplot(data5, aes(x = key, y = value, fill = value)) + 
+  geom_bar(stat = "identity") +
+  labs(title = "Offender Race Distribution", x = "Race", y = "Count") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# Victim Race Counts
+ggplot(data6, aes(x = key, y = value, fill = value)) + 
+  geom_bar(stat = "identity") +
+  labs(title = "Victim Race Distribution", x = "Race", y = "Count") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+# Visualizations of Sex
+
+```{r, message=FALSE, warning=FALSE, fig.height=4, fig.width=12}
+# Offender sex
+ggplot(data7_long, aes(x = Sex, y = Count, fill = Sex)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Distribution of Offender Sex", x = "Sex", y = "Count") +
+  theme_minimal()
+
+# Victim sex
+ggplot(data8_long, aes(x = Sex, y = Count, fill = Sex)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Distribution of Victim Sex", x = "Sex", y = "Count") +
+  theme_minimal()
+```
+
+# Visualizations of Location
+
+```{r, message=FALSE, warning=FALSE, fig.height=4, fig.width=12}
+# Location of Incidents
+ggplot(data9, aes(x = key, y = value, fill = value)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Incidents by Location", x = "Location", y = "Count") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+# Visualizations of Weapons used
+
+```{r, message=FALSE, warning=FALSE, fig.height=4, fig.width=12}
+# Weapons used at Incident
+ggplot(data11, aes(x = key, y = value, fill = value)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Incidents by Weapon", x = "Weapon", y = "Count") +
+  theme(axis.text.x = element_text(angle = 45, hjust =1))
+```
+
+# Visualizations of Offense
+
+```{r, message=FALSE, warning=FALSE, fig.height=12, fig.width=22}
+# Type of Offense
+ggplot(data12, aes(x = key, y = value, fill = value)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "Type of Offense", x= "Offense", y = "Count") +
+  theme(axist.text.x = element_text(angle = 45, hjust =1))
+```
+
+# Visualizations of Relationship between Offender and Victim
+
+```{r, message=FALSE, warning=FALSE, fig.height=4, fig.width=12}
+# Relationship between Offender and Victim
+ggplot(data10, aes(x = key, y = value, fill = value)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "Relationship Between Offender and Victim", x = "Relationship", y = "Count")
+```
