@@ -1,7 +1,7 @@
 ---
 title: "Statistical Model"
 author: "Scott Townsend"
-date: "`r format(Sys.time(), '%B %d, %Y')`"
+date: "December 16, 2024"
 
 execute:
   keep-md: true
@@ -12,9 +12,14 @@ format:
     code-line-numbers: true
 ---
 
+
+
 ### Data & Libraries
 
-```{r, message=FALSE, warning=FALSE}
+
+::: {.cell}
+
+```{.r .cell-code}
 library(dplyr)
 library(ggplot2)
 library(readr)
@@ -47,16 +52,27 @@ data8_long <- data8 %>%
     values_to = "Count"           
   )
 ```
+:::
+
 
 # Visualizations of the Ages of Offenders and Victims
 
-```{r, message=FALSE, warning=FALSE, fig.height=4, fig.width=12}
+
+::: {.cell}
+
+```{.r .cell-code}
 # Offender Counts
 ggplot(data1, aes(x = key, y = value, fill = value)) + 
   geom_bar(stat = "identity") +
   labs(title = "Offender Age Distribution", x = "Offender Age", y = "Count") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
 
+::: {.cell-output-display}
+![](Statistical_Model_files/figure-html/unnamed-chunk-2-1.png){width=1152}
+:::
+
+```{.r .cell-code}
 # Victim Counts
 ggplot(data2, aes(x = key, y = value, fill = value)) + 
   geom_bar(stat = "identity") +
@@ -64,15 +80,30 @@ ggplot(data2, aes(x = key, y = value, fill = value)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 
+::: {.cell-output-display}
+![](Statistical_Model_files/figure-html/unnamed-chunk-2-2.png){width=1152}
+:::
+:::
+
+
 # Visualizations of Ethnicity
 
-```{r, message=FALSE, warning=FALSE, fig.height=4, fig.width=12}
+
+::: {.cell}
+
+```{.r .cell-code}
 # Offender Ethnicity Counts
 ggplot(data3, aes(x = key, y = value, fill = value)) + 
   geom_bar(stat = "identity") +
   labs(title = "Offender Ethnicity Distribution", x = "Ethnicity", y = "Count") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
 
+::: {.cell-output-display}
+![](Statistical_Model_files/figure-html/unnamed-chunk-3-1.png){width=1152}
+:::
+
+```{.r .cell-code}
 # Victim Ethnicity Counts
 ggplot(data4, aes(x = key, y = value, fill = value)) + 
   geom_bar(stat = "identity") +
@@ -80,15 +111,30 @@ ggplot(data4, aes(x = key, y = value, fill = value)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 
+::: {.cell-output-display}
+![](Statistical_Model_files/figure-html/unnamed-chunk-3-2.png){width=1152}
+:::
+:::
+
+
 # Visualizations of Race
 
-```{r, message=FALSE, warning=FALSE, fig.height=4, fig.width=12}
+
+::: {.cell}
+
+```{.r .cell-code}
 # Offender Race Counts
 ggplot(data5, aes(x = key, y = value, fill = value)) + 
   geom_bar(stat = "identity") +
   labs(title = "Offender Race Distribution", x = "Race", y = "Count") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
 
+::: {.cell-output-display}
+![](Statistical_Model_files/figure-html/unnamed-chunk-4-1.png){width=1152}
+:::
+
+```{.r .cell-code}
 # Victim Race Counts
 ggplot(data6, aes(x = key, y = value, fill = value)) + 
   geom_bar(stat = "identity") +
@@ -96,15 +142,30 @@ ggplot(data6, aes(x = key, y = value, fill = value)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 
+::: {.cell-output-display}
+![](Statistical_Model_files/figure-html/unnamed-chunk-4-2.png){width=1152}
+:::
+:::
+
+
 # Visualizations of Sex
 
-```{r, message=FALSE, warning=FALSE, fig.height=4, fig.width=12}
+
+::: {.cell}
+
+```{.r .cell-code}
 # Offender sex
 ggplot(data7_long, aes(x = Sex, y = Count, fill = Sex)) +
   geom_bar(stat = "identity") +
   labs(title = "Distribution of Offender Sex", x = "Sex", y = "Count") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
 
+::: {.cell-output-display}
+![](Statistical_Model_files/figure-html/unnamed-chunk-5-1.png){width=1152}
+:::
+
+```{.r .cell-code}
 # Victim sex
 ggplot(data8_long, aes(x = Sex, y = Count, fill = Sex)) +
   geom_bar(stat = "identity") +
@@ -112,9 +173,18 @@ ggplot(data8_long, aes(x = Sex, y = Count, fill = Sex)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 
+::: {.cell-output-display}
+![](Statistical_Model_files/figure-html/unnamed-chunk-5-2.png){width=1152}
+:::
+:::
+
+
 # Visualizations of Location
 
-```{r, message=FALSE, warning=FALSE, fig.height=4, fig.width=12}
+
+::: {.cell}
+
+```{.r .cell-code}
 # Location of Incidents
 ggplot(data9, aes(x = key, y = value, fill = value)) +
   geom_bar(stat = "identity") +
@@ -122,9 +192,18 @@ ggplot(data9, aes(x = key, y = value, fill = value)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 
+::: {.cell-output-display}
+![](Statistical_Model_files/figure-html/unnamed-chunk-6-1.png){width=1152}
+:::
+:::
+
+
 # Visualizations of Weapons used
 
-```{r, message=FALSE, warning=FALSE, fig.height=4, fig.width=12}
+
+::: {.cell}
+
+```{.r .cell-code}
 # Weapons used at Incident
 ggplot(data11, aes(x = key, y = value, fill = value)) +
   geom_bar(stat = "identity") +
@@ -132,9 +211,18 @@ ggplot(data11, aes(x = key, y = value, fill = value)) +
   theme(axis.text.x = element_text(angle = 45, hjust =1))
 ```
 
+::: {.cell-output-display}
+![](Statistical_Model_files/figure-html/unnamed-chunk-7-1.png){width=1152}
+:::
+:::
+
+
 # Visualizations of Offense
 
-```{r, message=FALSE, warning=FALSE, fig.height=12, fig.width=22}
+
+::: {.cell}
+
+```{.r .cell-code}
 # Type of Offense
 ggplot(data12, aes(x = key, y = value, fill = value)) +
   geom_bar(stat = "identity") +
@@ -143,12 +231,26 @@ ggplot(data12, aes(x = key, y = value, fill = value)) +
   theme(axist.text.x = element_text(angle = 45, hjust =1))
 ```
 
+::: {.cell-output-display}
+![](Statistical_Model_files/figure-html/unnamed-chunk-8-1.png){width=2112}
+:::
+:::
+
+
 # Visualizations of Relationship between Offender and Victim
 
-```{r, message=FALSE, warning=FALSE, fig.height=4, fig.width=12}
+
+::: {.cell}
+
+```{.r .cell-code}
 # Relationship between Offender and Victim
 ggplot(data10, aes(x = key, y = value, fill = value)) +
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(title = "Relationship Between Offender and Victim", x = "Relationship", y = "Count")
 ```
+
+::: {.cell-output-display}
+![](Statistical_Model_files/figure-html/unnamed-chunk-9-1.png){width=1152}
+:::
+:::
