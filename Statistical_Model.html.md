@@ -1,7 +1,7 @@
 ---
 title: "Statistical Model"
 author: "Scott Townsend"
-date: "December 16, 2024"
+date: "December 18, 2024"
 
 execute:
   keep-md: true
@@ -57,11 +57,13 @@ data8_long <- data8 %>%
 
 # Visualizations of the Ages of Offenders and Victims
 
+These charts reveal the age distribution of offenders and victims, highlighting whether certain age groups are more frequently involved.
+
 
 ::: {.cell}
 
 ```{.r .cell-code}
-# Offender Counts
+# Offender Age Distribution
 ggplot(data1, aes(x = key, y = value, fill = value)) + 
   geom_bar(stat = "identity") +
   labs(title = "Offender Age Distribution", x = "Offender Age", y = "Count") +
@@ -73,7 +75,7 @@ ggplot(data1, aes(x = key, y = value, fill = value)) +
 :::
 
 ```{.r .cell-code}
-# Victim Counts
+# Victim Age Distribution
 ggplot(data2, aes(x = key, y = value, fill = value)) + 
   geom_bar(stat = "identity") +
   labs(title = "Victim Age Distribution", x = "Victim Age", y = "Count") +
@@ -85,8 +87,15 @@ ggplot(data2, aes(x = key, y = value, fill = value)) +
 :::
 :::
 
+The offender age distribution highlights that the most common age bracket for offenders is 20–29, closely followed by the 30–39 age group. This suggests that individuals aged 20–39 are most frequently involved in offenses. Such findings could reflect societal, economic, or psychological factors influencing this demographic's behavior.
+
+Similarly, the victim age distribution mirrors this trend, with the 20–29 age bracket being the most commonly affected group. This overlap may indicate that offenders and victims often belong to similar age groups, which could be linked to social environments or interpersonal relationships prevalent within these age ranges.
+
+These observations are critical for designing targeted intervention strategies, such as community programs, outreach efforts, or educational campaigns, aimed at reducing offenses and protecting the most at-risk age groups.
 
 # Visualizations of Ethnicity
+
+The visualizations compare ethnicity and race distributions of offenders and victims, identifying potential correlations.
 
 
 ::: {.cell}
@@ -116,8 +125,13 @@ ggplot(data4, aes(x = key, y = value, fill = value)) +
 :::
 :::
 
+From these distributions, we can infer important insights regarding ethnicity. Although the charts do not provide a detailed breakdown of specific ethnic groups, they reveal that the majority of both offenders and victims are identified as neither Hispanic nor Latino. This suggests that other ethnic groups may be more frequently involved as either offenders or victims.
+
+This observation underscores the need for further analysis to understand the sociocultural and systemic factors contributing to these patterns. By identifying the specific ethnic groups represented and examining the contextual factors, policymakers and community leaders can design more effective interventions to address the root causes and disparities associated with crime and victimization.
 
 # Visualizations of Race
+
+These charts compare the distributions of races of the offenders and that of the victims.
 
 
 ::: {.cell}
@@ -149,6 +163,8 @@ ggplot(data6, aes(x = key, y = value, fill = value)) +
 
 
 # Visualizations of Sex
+
+These graphs examine the gender distribution, indicating whether males or females dominate certain roles in incidents.
 
 
 ::: {.cell}
@@ -238,6 +254,8 @@ ggplot(data12, aes(x = key, y = value, fill = value)) +
 
 
 # Visualizations of Relationship between Offender and Victim
+
+This chart investigates the relationships between offenders and victims, uncovering any recurring dynamics.
 
 
 ::: {.cell}

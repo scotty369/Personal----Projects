@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Scott Townsend">
-<meta name="dcterms.date" content="2024-12-16">
+<meta name="dcterms.date" content="2024-12-18">
 
 <title>Statistical Model</title>
 <style>
@@ -98,7 +98,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 16, 2024</p>
+      <p class="date">December 18, 2024</p>
     </div>
   </div>
   
@@ -151,10 +151,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="visualizations-of-the-ages-of-offenders-and-victims" class="level1">
 <h1>Visualizations of the Ages of Offenders and Victims</h1>
+<p>These charts reveal the age distribution of offenders and victims, highlighting whether certain age groups are more frequently involved.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># Offender Counts</span></span>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># Offender Age Distribution</span></span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="fu">ggplot</span>(data1, <span class="fu">aes</span>(<span class="at">x =</span> key, <span class="at">y =</span> value, <span class="at">fill =</span> value)) <span class="sc">+</span> </span>
 <span id="cb2-3"><a href="#cb2-3"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
 <span id="cb2-4"><a href="#cb2-4"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Offender Age Distribution"</span>, <span class="at">x =</span> <span class="st">"Offender Age"</span>, <span class="at">y =</span> <span class="st">"Count"</span>) <span class="sc">+</span></span>
@@ -169,7 +170,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Victim Counts</span></span>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Victim Age Distribution</span></span>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="fu">ggplot</span>(data2, <span class="fu">aes</span>(<span class="at">x =</span> key, <span class="at">y =</span> value, <span class="at">fill =</span> value)) <span class="sc">+</span> </span>
 <span id="cb3-3"><a href="#cb3-3"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
 <span id="cb3-4"><a href="#cb3-4"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Victim Age Distribution"</span>, <span class="at">x =</span> <span class="st">"Victim Age"</span>, <span class="at">y =</span> <span class="st">"Count"</span>) <span class="sc">+</span></span>
@@ -183,9 +184,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<p>The offender age distribution highlights that the most common age bracket for offenders is 20–29, closely followed by the 30–39 age group. This suggests that individuals aged 20–39 are most frequently involved in offenses. Such findings could reflect societal, economic, or psychological factors influencing this demographic’s behavior.</p>
+<p>Similarly, the victim age distribution mirrors this trend, with the 20–29 age bracket being the most commonly affected group. This overlap may indicate that offenders and victims often belong to similar age groups, which could be linked to social environments or interpersonal relationships prevalent within these age ranges.</p>
+<p>These observations are critical for designing targeted intervention strategies, such as community programs, outreach efforts, or educational campaigns, aimed at reducing offenses and protecting the most at-risk age groups.</p>
 </section>
 <section id="visualizations-of-ethnicity" class="level1">
 <h1>Visualizations of Ethnicity</h1>
+<p>The visualizations compare ethnicity and race distributions of offenders and victims, identifying potential correlations.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -218,9 +223,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<p>From these distributions, we can infer important insights regarding ethnicity. Although the charts do not provide a detailed breakdown of specific ethnic groups, they reveal that the majority of both offenders and victims are identified as neither Hispanic nor Latino. This suggests that other ethnic groups may be more frequently involved as either offenders or victims.</p>
+<p>This observation underscores the need for further analysis to understand the sociocultural and systemic factors contributing to these patterns. By identifying the specific ethnic groups represented and examining the contextual factors, policymakers and community leaders can design more effective interventions to address the root causes and disparities associated with crime and victimization.</p>
 </section>
 <section id="visualizations-of-race" class="level1">
 <h1>Visualizations of Race</h1>
+<p>These charts compare the distributions of races of the offenders and that of the victims.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -256,6 +264,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="visualizations-of-sex" class="level1">
 <h1>Visualizations of Sex</h1>
+<p>These graphs examine the gender distribution, indicating whether males or females dominate certain roles in incidents.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -352,6 +361,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="visualizations-of-relationship-between-offender-and-victim" class="level1">
 <h1>Visualizations of Relationship between Offender and Victim</h1>
+<p>This chart investigates the relationships between offenders and victims, uncovering any recurring dynamics.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
