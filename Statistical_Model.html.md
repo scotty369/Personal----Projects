@@ -8,8 +8,23 @@ execute:
 
 format:
   html:
-    code-fold: true
     code-line-numbers: true
+    self-contained: true
+    page-layout: full
+    title-block-banner: true
+    toc: true
+    toc-depth: 3
+    toc-location: body
+    number-sections: false
+    html-math-method: katex
+    code-fold: true
+    code-summary: "Show the code"
+    code-overflow: wrap
+    code-copy: hover
+    code-tools:
+        source: false
+        toggle: true
+        caption: See code
 ---
 
 
@@ -17,42 +32,7 @@ format:
 ### Data & Libraries
 
 
-::: {.cell}
 
-```{.r .cell-code}
-library(dplyr)
-library(ggplot2)
-library(readr)
-library(tidyr)
-
-data1 <- read.csv("Offender.csv")
-data2 <- read.csv("Victim.csv")
-data3 <- read.csv("Offender_ethnicity.csv")
-data4 <- read.csv("Victim_ethnicity.csv")
-data5 <- read.csv("Offender_race.csv")
-data6 <- read.csv("Victim_race.csv")
-data7 <- read.csv("Offender_sex.csv")
-data8 <- read.csv("Victim_sex.csv")
-data9 <- read.csv("Location.csv")
-data10 <- read.csv("Relationship.csv")
-data11 <- read.csv("Weapon.csv")
-data12 <- read.csv("Offense.csv")
-
-data7_long <- data7 %>%
-  pivot_longer(
-    cols = everything(),          
-    names_to = "Sex",             
-    values_to = "Count"           
-  )
-
-data8_long <- data8 %>%
-  pivot_longer(
-    cols = everything(),          
-    names_to = "Sex",             
-    values_to = "Count"           
-  )
-```
-:::
 
 
 # Visualizations of the Ages of Offenders and Victims
@@ -86,6 +66,7 @@ ggplot(data2, aes(x = key, y = value, fill = value)) +
 ![](Statistical_Model_files/figure-html/unnamed-chunk-2-2.png){width=1152}
 :::
 :::
+
 
 The offender age distribution highlights that the most common age bracket for offenders is 20–29, closely followed by the 30–39 age group. This suggests that individuals aged 20–39 are most frequently involved in offenses. Such findings could reflect societal, economic, or psychological factors influencing this demographic's behavior.
 
@@ -125,6 +106,7 @@ ggplot(data4, aes(x = key, y = value, fill = value)) +
 :::
 :::
 
+
 From these distributions, we can infer important insights regarding ethnicity. Although the charts do not provide a detailed breakdown of specific ethnic groups, they reveal that the majority of both offenders and victims are identified as neither Hispanic nor Latino. This suggests that other ethnic groups may be more frequently involved as either offenders or victims.
 
 This observation underscores the need for further analysis to understand the sociocultural and systemic factors contributing to these patterns. By identifying the specific ethnic groups represented and examining the contextual factors, policymakers and community leaders can design more effective interventions to address the root causes and disparities associated with crime and victimization.
@@ -161,6 +143,10 @@ ggplot(data6, aes(x = key, y = value, fill = value)) +
 :::
 :::
 
+
+Among offenders, White individuals and African Americans are represented in the highest proportions, suggesting that these groups are more frequently involved in criminal incidents. This observation may reflect broader societal, economic, or structural factors that influence crime rates and should be further examined to identify underlying causes.
+
+When examining victims, it appears that White individuals are more likely to be affected. This pattern underscores the need to explore potential connections between offender demographics and victimization trends, considering factors such as geographic location, socio-economic context, and interpersonal dynamics.
 
 # Visualizations of Sex
 
