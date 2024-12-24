@@ -1,7 +1,7 @@
 ---
-title: "Statistical Model"
+title: "Statistical Model of Crime Incidents"
 author: "Scott Townsend"
-date: "December 18, 2024"
+date: "December 23, 2024"
 
 execute:
   keep-md: true
@@ -28,6 +28,9 @@ format:
 ---
 
 
+# Introduction
+
+In this analysis, we explore the demographic and situational factors involved in criminal incidents, based on a set of datasets. Through various visualizations, we aim to understand trends in offender and victim characteristics, the nature of offenses, and the types of locations and weapons involved. This report presents insights into offender-victim relationships, age distributions, race, ethnicity, gender, offense types, and other relevant factors to better inform crime prevention strategies.
 
 ### Data & Libraries
 
@@ -37,7 +40,7 @@ format:
 
 # Visualizations of the Ages of Offenders and Victims
 
-These charts reveal the age distribution of offenders and victims, highlighting whether certain age groups are more frequently involved.
+These visualizations reveal the age distribution of both offenders and victims, helping to identify the most common age groups involved in criminal incidents.
 
 
 ::: {.cell}
@@ -68,15 +71,11 @@ ggplot(data2, aes(x = key, y = value, fill = value)) +
 :::
 
 
-The offender age distribution highlights that the most common age bracket for offenders is 20–29, closely followed by the 30–39 age group. This suggests that individuals aged 20–39 are most frequently involved in offenses. Such findings could reflect societal, economic, or psychological factors influencing this demographic's behavior.
-
-Similarly, the victim age distribution mirrors this trend, with the 20–29 age bracket being the most commonly affected group. This overlap may indicate that offenders and victims often belong to similar age groups, which could be linked to social environments or interpersonal relationships prevalent within these age ranges.
-
-These observations are critical for designing targeted intervention strategies, such as community programs, outreach efforts, or educational campaigns, aimed at reducing offenses and protecting the most at-risk age groups.
+The offender age distribution shows that individuals aged 20–29 are most commonly involved in criminal activities, followed closely by those in the 30–39 age group. This suggests that younger adults are more likely to engage in offenses. A similar trend is observed in the victim age distribution, where individuals in their 20s are most frequently victimized. This overlap may reflect social or environmental factors that influence both the likelihood of offending and victimization.
 
 # Visualizations of Ethnicity
 
-The visualizations compare ethnicity and race distributions of offenders and victims, identifying potential correlations.
+These charts compare the ethnicity distributions of offenders and victims, providing insight into potential patterns of racial disparities.
 
 
 ::: {.cell}
@@ -107,13 +106,11 @@ ggplot(data4, aes(x = key, y = value, fill = value)) +
 :::
 
 
-From these distributions, we can infer important insights regarding ethnicity. Although the charts do not provide a detailed breakdown of specific ethnic groups, they reveal that the majority of both offenders and victims are identified as neither Hispanic nor Latino. This suggests that other ethnic groups may be more frequently involved as either offenders or victims.
-
-This observation underscores the need for further analysis to understand the sociocultural and systemic factors contributing to these patterns. By identifying the specific ethnic groups represented and examining the contextual factors, policymakers and community leaders can design more effective interventions to address the root causes and disparities associated with crime and victimization.
+The ethnicity distribution reveals that the majority of both offenders and victims are categorized as non-Hispanic and non-Latino. These findings suggest that ethnic groups other than Hispanic or Latino individuals are more frequently involved in criminal incidents, either as offenders or victims. Further analysis is required to identify the underlying sociocultural or systemic factors that contribute to these patterns.
 
 # Visualizations of Race
 
-These charts compare the distributions of races of the offenders and that of the victims.
+Here, we examine the race distribution of both offenders and victims to explore if any race-related disparities are evident.
 
 
 ::: {.cell}
@@ -144,13 +141,11 @@ ggplot(data6, aes(x = key, y = value, fill = value)) +
 :::
 
 
-Among offenders, White individuals and African Americans are represented in the highest proportions, suggesting that these groups are more frequently involved in criminal incidents. This observation may reflect broader societal, economic, or structural factors that influence crime rates and should be further examined to identify underlying causes.
-
-When examining victims, it appears that White individuals are more likely to be affected. This pattern underscores the need to explore potential connections between offender demographics and victimization trends, considering factors such as geographic location, socio-economic context, and interpersonal dynamics.
+The race distributions indicate that both White and African American individuals are most commonly represented among offenders, which may suggest broader societal or economic factors at play. On the victim side, White individuals appear to be more frequently victimized, which warrants further exploration into the intersection of race, geographic location, and social dynamics.
 
 # Visualizations of Sex
 
-These graphs examine the gender distribution, indicating whether males or females dominate certain roles in incidents.
+These graphs examine the distribution of gender among offenders and victims, revealing patterns in male and female involvement in criminal incidents.
 
 
 ::: {.cell}
@@ -181,7 +176,11 @@ ggplot(data8_long, aes(x = Sex, y = Count, fill = Sex)) +
 :::
 
 
+The distribution of gender reveals a clear predominance of males in both offender and victim categories, though the gap between male and female victims is narrower than expected. This suggests a significant number of female victims, challenging the common perception that males are overwhelmingly victimized in criminal incidents.
+
 # Visualizations of Location
+
+This chart shows the frequency of criminal incidents based on their location, shedding light on the environments where these offenses are most likely to occur.
 
 
 ::: {.cell}
@@ -200,7 +199,11 @@ ggplot(data9, aes(x = key, y = value, fill = value)) +
 :::
 
 
+The majority of incidents occur in residential locations, with a significant number also taking place in public areas such as streets and sidewalks. These findings emphasize the importance of focusing on both private and public safety measures to reduce criminal activities in these common settings.
+
 # Visualizations of Weapons used
+
+This visualization provides an overview of the types of weapons involved in criminal incidents, offering insights into the prevalence of various weapon categories.
 
 
 ::: {.cell}
@@ -219,7 +222,11 @@ ggplot(data11, aes(x = key, y = value, fill = value)) +
 :::
 
 
+Personal weapons, such as hands, knees, and elbows, are the most commonly used in incidents, underscoring the significant role of physical altercations. Firearms, knives, and other weapons also contribute to the frequency of violent incidents, highlighting the need for targeted interventions around weapon control and de-escalation strategies.
+
 # Visualizations of Offense
+
+This chart showcases the various types of offenses that took place during reported incidents, providing a detailed breakdown of the nature and frequency of each offense. 
 
 
 ::: {.cell}
@@ -238,6 +245,8 @@ ggplot(data12, aes(x = key, y = value, fill = value)) +
 :::
 :::
 
+
+This visualization suggests that the most prevalent type of offense involves the destruction of property. Other notable offenses include simple assaults, breaking and entering, drug-related crimes, and weapon violations, each contributing to the overall distribution of criminal activities. This breakdown provides a clear view of the most frequent offenses and their relative occurrence.
 
 # Visualizations of Relationship between Offender and Victim
 
@@ -258,3 +267,12 @@ ggplot(data10, aes(x = key, y = value, fill = value)) +
 ![](Statistical_Model_files/figure-html/unnamed-chunk-9-1.png){width=1152}
 :::
 :::
+
+
+This chart, which outlines the relationship between offenders and victims, reveals several key insights. The most prevalent dynamic is that of strangers—incidents where the offender and victim have no prior connection or affiliation. Beyond this, other significant relationships include boyfriends/girlfriends, friends, spouses, and acquaintances. This data highlights the varying degrees of familiarity between offenders and victims, shedding light on the diverse contexts in which these incidents occur.
+
+# Conclusion 
+
+This statistical analysis reveals several critical patterns in criminal activity, highlighting age, race, ethnicity, gender, and the nature of offenses. It is evident that younger individuals, particularly males, are most often involved in criminal incidents, both as offenders and victims. The types of incidents, locations, and weapons used also reflect broader social dynamics, offering valuable insights for policy development, resource allocation, and crime prevention strategies.
+
+By further investigating these trends and integrating additional datasets, law enforcement agencies and policymakers can take more targeted actions to reduce crime rates and enhance public safety.
