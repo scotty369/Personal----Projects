@@ -16,9 +16,25 @@ The majority of incidents occur in residential locations, with a significant num
 
 These charts compare the ethnicity distributions of offenders and victims, providing insight into potential patterns of racial disparities.
 
-![Ethnicties of the Offenders](images/newplot%20(1).png){fig-align="left" width="500"} ![](images/newplot (2).png){fig-align="right" width="500"}
+![Ethnicties of the Offenders](images/newplot%20(1).png){fig-align="left" width="500"} ![](images/newplot%20(2).png){fig-align="right" width="500"}
 
 The ethnicity distribution reveals that the majority of both offenders and victims are categorized as non-Hispanic and non-Latino. These findings suggest that ethnic groups other than Hispanic or Latino individuals are more frequently involved in criminal incidents, either as offenders or victims. Further analysis is required to identify the underlying sociocultural or systemic factors that contribute to these patterns.
+
+### Types of Offenses Committed
+
+This chart showcases the various types of offenses that took place during reported incidents, providing a detailed breakdown of the nature and frequency of each offense.
+
+![](images/newplot%20(4).png){fig-align="left" width="500"}
+
+This visualization suggests that the most prevalent type of offense involves the destruction of property. Other notable offenses include simple assaults, breaking and entering, drug-related crimes, and weapon violations, each contributing to the overall distribution of criminal activities. This breakdown provides a clear view of the most frequent offenses and their relative occurrence.
+
+### Weapons Used
+
+This visualization provides an overview of the types of weapons involved in criminal incidents, offering insights into the prevalence of various weapon categories.
+
+![](images/newplot (5).png){fig-align="left" width="500"}
+
+Personal weapons, such as hands, knees, and elbows, are the most commonly used in incidents, underscoring the significant role of physical altercations. Firearms, knives, and other weapons also contribute to the frequency of violent incidents, highlighting the need for targeted interventions around weapon control and de-escalation strategies.
 
 ## Conclusion
 
