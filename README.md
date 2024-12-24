@@ -1,0 +1,3 @@
+# Gun Violence Analysis
+
+In this analysis, we explore the demographic and situational factors involved in criminal incidents, based on a set of datasets. Through various visualizations, we aim to understand trends in offender and victim characteristics, the nature of offenses, and the types of locations and weapons involved. This report presents insights into offender-victim relationships, age distributions, race, ethnicity, gender, offense types, and other relevant factors to better inform crime prevention strategies. Additionally, we will go over some findings of an ML model created to predict the location of an incident. 
