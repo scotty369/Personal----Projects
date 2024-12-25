@@ -1,7 +1,7 @@
 ---
 title: "Statistical Model of Crime Incidents"
 author: "Scott Townsend"
-date: "December 23, 2024"
+date: "December 24, 2024"
 
 execute:
   keep-md: true
