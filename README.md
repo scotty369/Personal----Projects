@@ -12,11 +12,23 @@ This chart shows the frequency of criminal incidents based on their location, sh
 
 The majority of incidents occur in residential locations, with a significant number also taking place in public areas such as streets and sidewalks. These findings emphasize the importance of focusing on both private and public safety measures to reduce criminal activities in these common settings.
 
+### *Age Ranges of Offenders vs Victims*
+
+These visualizations reveal the age distribution of both offenders and victims, helping to identify the most common age groups involved in criminal incidents.
+
+![](images/newplot (9).png){fig-align="left" width="500"}
+
+![](images/newplot (10).png){fig-align="left" width="500"}
+
+The offender age distribution shows that individuals aged 20–29 are most commonly involved in criminal activities, followed closely by those in the 30–39 age group. This suggests that younger adults are more likely to engage in offenses. A similar trend is observed in the victim age distribution, where individuals in their 20s are most frequently victimized. This overlap may reflect social or environmental factors that influence both the likelihood of offending and victimization.
+
 ### *Ethnicities of the Offenders vs Victims*
 
 These charts compare the ethnicity distributions of offenders and victims, providing insight into potential patterns of racial disparities.
 
-![Ethnicties of the Offenders](images/newplot%20(1).png){fig-align="left" width="500"} ![](images/newplot%20(2).png){fig-align="right" width="500"}
+![Ethnicties of the Offenders](images/newplot%20(1).png){fig-align="left" width="500"}
+
+![](images/newplot (11).png){fig-align="left" width="500"}
 
 The ethnicity distribution reveals that the majority of both offenders and victims are categorized as non-Hispanic and non-Latino. These findings suggest that ethnic groups other than Hispanic or Latino individuals are more frequently involved in criminal incidents, either as offenders or victims. Further analysis is required to identify the underlying sociocultural or systemic factors that contribute to these patterns.
 
@@ -24,9 +36,9 @@ The ethnicity distribution reveals that the majority of both offenders and victi
 
 Here, we examine the race distribution of both offenders and victims to explore if any race-related disparities are evident.
 
-![](images/newplot (7).png){fig-align="left" width="500"}
+![](images/newplot%20(7).png){fig-align="left" width="500"}
 
-![](images/newplot (8)-2.png){fig-align="left" width="500"}
+![](images/newplot%20(8)-2.png){fig-align="left" width="500"}
 
 The race distributions indicate that both White and African American individuals are most commonly represented among offenders, which may suggest broader societal or economic factors at play. On the victim side, White individuals appear to be more frequently victimized, which warrants further exploration into the intersection of race, geographic location, and social dynamics.
 
