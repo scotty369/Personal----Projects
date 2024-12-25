@@ -38,7 +38,7 @@ The charts below compare the ethnicities of offenders and victims to reveal pote
 
 #### Key Insight:
 
--   The majority of both **offenders** and **victims** are categorized as **non-Hispanic and non-Latino**. This suggests that ethnic groups outside of the Hispanic/Latino community are more frequently involved in criminal incidents. Further analysis is needed to explore the sociocultural and systemic factors behind these patterns.*Races of Offenders vs Victims*
+-   The majority of both **offenders** and **victims** are categorized as **non-Hispanic and non-Latino**. This suggests that ethnic groups outside of the Hispanic/Latino community are more frequently involved in criminal incidents. Further analysis is needed to explore the sociocultural and systemic factors behind these patterns.
 
 ### 4. *Races of Offenders vs Victims*
 
