@@ -2,6 +2,8 @@ import pandas as pd
 import plotly.express as px
 import seaborn as sns
 import matplotlib.pyplot as plt
+import janitor
+from openpyxl import load_workbook
 
 location_data = pd.read_csv('Offender_ethnicity.csv')
 
