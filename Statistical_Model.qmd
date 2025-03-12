@@ -194,6 +194,92 @@ ggplot(data10, aes(x = key, y = value, fill = value)) +
   coord_flip() +
   labs(title = "Relationship Between Offender and Victim", x = "Relationship", y = "Count")
 ```
+```{r}
+
+library(ggplot2)
+library(ggridges)
+
+# Offender Age Distribution - Enhanced Boxplot
+ggplot(data1, aes(x = factor(1), y = value)) + 
+  geom_boxplot(fill = "#4682B4", color = "black", alpha = 0.8, outlier.shape = 16, outlier.color = "black") +
+  labs(title = "Offender Age Distribution", x = "", y = "Age") +
+  theme_minimal(base_size = 14) +
+  theme(axis.text.x = element_blank())
+
+# Victim Age Distribution - Enhanced Boxplot
+ggplot(data2, aes(x = factor(1), y = value)) + 
+  geom_boxplot(fill = "#B22222", color = "black", alpha = 0.8, outlier.shape = 16, outlier.color = "black") +
+  labs(title = "Victim Age Distribution", x = "", y = "Age") +
+  theme_minimal(base_size = 14) +
+  theme(axis.text.x = element_blank())
+
+# Offender Race - Smooth Line Chart
+ggplot(data5, aes(x = key, y = value, group = 1)) + 
+  geom_line(color = "#1E90FF", size = 1.5, linetype = "solid") +
+  geom_point(size = 4, shape = 21, fill = "white", color = "#1E90FF", stroke = 1.5) +
+  labs(title = "Offender Race Distribution", x = "Race", y = "Count") +
+  theme_minimal(base_size = 14)
+
+# Victim Race - Smooth Line Chart
+ggplot(data6, aes(x = key, y = value, group = 1)) + 
+  geom_line(color = "#DC143C", size = 1.5, linetype = "solid") +
+  geom_point(size = 4, shape = 21, fill = "white", color = "#DC143C", stroke = 1.5) +
+  labs(title = "Victim Race Distribution", x = "Race", y = "Count") +
+  theme_minimal(base_size = 14)
+
+# Incident Locations - Enhanced Line Chart
+ggplot(data9, aes(x = key, y = value, group = 1)) +
+  geom_line(color = "#6A5ACD", size = 1.5, linetype = "solid") +
+  geom_point(size = 4, shape = 21, fill = "white", color = "#6A5ACD", stroke = 1.5) +
+  labs(title = "Incidents by Location", x = "Location", y = "Count") +
+  theme_minimal(base_size = 14) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# Weapon Use - Enhanced Time Series Chart
+ggplot(data11, aes(x = key, y = value, group = 1)) +
+  geom_line(color = "black", size = 1.5, linetype = "solid") +
+  geom_point(size = 4, shape = 21, fill = "white", color = "black", stroke = 1.5) +
+  labs(title = "Incidents by Weapon", x = "Weapon", y = "Count") +
+  theme_minimal(base_size = 14) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+```{r}
+# Victim Sex - Enhanced Boxplot
+ggplot(data8_long, aes(x = Sex, y = Count, fill = Sex)) +
+  geom_boxplot(alpha = 0.85, outlier.shape = 16, outlier.color = "black") +
+  scale_fill_manual(values = c("#8B0000", "#FFD700")) +
+  labs(title = "Distribution of Victim Sex", x = "Sex", y = "Count") +
+  theme_minimal(base_size = 14) +
+  theme(legend.position = "none")
+
+# Offender Sex - Enhanced Boxplot
+ggplot(data7_long, aes(x = Sex, y = Count, fill = Sex)) +
+  geom_boxplot(alpha = 0.85, outlier.shape = 16, outlier.color = "black") +
+  scale_fill_manual(values = c("#008B8B", "#FFA07A")) +
+  labs(title = "Distribution of Offender Sex", x = "Sex", y = "Count") +
+  theme_minimal(base_size = 14) +
+  theme(legend.position = "none")
+
+# Offender Ethnicity - Enhanced Ridgeline Plot
+ggplot(data3, aes(x = value, y = key, fill = key)) + 
+  geom_density_ridges(scale = 1.2, alpha = 0.85, color = "white") +
+  scale_fill_viridis_d(option = "magma") +
+  labs(title = "Offender Ethnicity Distribution", x = "Count", y = "Ethnicity") +
+  theme_ridges(base_size = 14) +
+  theme(legend.position = "none")
+
+# Victim Ethnicity - Enhanced Ridgeline Plot
+ggplot(data4, aes(x = value, y = key, fill = key)) + 
+  geom_density_ridges(scale = 1.2, alpha = 0.85, color = "white") +
+  scale_fill_viridis_d(option = "plasma") +
+  labs(title = "Victim Ethnicity Distribution", x = "Count", y = "Ethnicity") +
+  theme_ridges(base_size = 14) +
+  theme(legend.position = "none")
+```
+```{r}
+
+```
+
 
 This chart, which outlines the relationship between offenders and victims, reveals several key insights. The most prevalent dynamic is that of strangers—incidents where the offender and victim have no prior connection or affiliation. Beyond this, other significant relationships include boyfriends/girlfriends, friends, spouses, and acquaintances. This data highlights the varying degrees of familiarity between offenders and victims, shedding light on the diverse contexts in which these incidents occur.
 
