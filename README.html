@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-02-18">
 
-<title>readme</title>
+<title>Crime Statistics Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -43,144 +44,76 @@ ul.task-list li input[type="checkbox"] {
 
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Crime Statistics Analysis</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Python</div>
+    <div class="quarto-category">Dataviz</div>
+  </div>
+  </div>
 
 
 
-<section id="criminal-incident-analysis" class="level1">
-<h1><strong><em>Criminal Incident Analysis</em></strong></h1>
-<section id="analysis-overview" class="level2">
-<h2 class="anchored" data-anchor-id="analysis-overview"><em>Analysis Overview</em></h2>
-<p>The analysis is structured into several key sections, each exploring a different aspect of criminal incidents. Below are the main insights drawn from the data:</p>
-<section id="reported-locations-of-incidents" class="level3">
-<h3 class="anchored" data-anchor-id="reported-locations-of-incidents"><em>1. Reported Locations of Incidents</em></h3>
-<p>This visualization provides an overview of the frequency of criminal incidents based on their location. Understanding where crimes occur helps in targeting both public and private safety initiatives.</p>
-<p><img src="images/newplot.png" class="img-fluid" width="500"></p>
-<section id="key-insight" class="level4">
-<h4 class="anchored" data-anchor-id="key-insight">Key Insight:</h4>
-<ul>
-<li><strong>Residential areas</strong> are the most common settings for criminal incidents, followed closely by <strong>public locations</strong> such as streets and sidewalks. These findings underscore the need for improved safety measures in both private homes and public spaces.</li>
-</ul>
-</section>
-</section>
-<section id="age-ranges-of-offenders-vs-victims" class="level3">
-<h3 class="anchored" data-anchor-id="age-ranges-of-offenders-vs-victims"><em>2. Age Ranges of Offenders vs Victims</em></h3>
-<p>The following charts show the age distributions of both offenders and victims, offering insights into the typical age groups involved in these incidents.</p>
-<div class="quarto-figure quarto-figure-left">
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 18, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="crime-statstics-analysis" class="level1">
+<h1><strong>Crime Statstics Analysis</strong></h1>
+<section id="crime-count-by-location" class="level2">
+<h2 class="anchored" data-anchor-id="crime-count-by-location"><em>Crime Count by Location</em></h2>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/newplot%20(9).png" class="img-fluid quarto-figure quarto-figure-left figure-img" width="500"></p>
+<p><img src="plot1.png" class="img-fluid figure-img"></p>
+<figcaption>Crime Count by Location</figcaption>
 </figure>
 </div>
-<div class="quarto-figure quarto-figure-left">
+<p>Crime is overwhelmingly concentrated in residences and public streets, with significantly lower rates in other locations. This highlights the need for targeted policing and crime prevention efforts in these high-risk areas. Understanding the underlying factors driving crime in homes and streets is crucial for effective intervention.</p>
+</section>
+<section id="offender-race-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="offender-race-distribution"><em>Offender Race Distribution</em></h2>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/newplot%20(10).png" class="img-fluid quarto-figure quarto-figure-left figure-img" width="500"></p>
+<p><img src="plot2.png" class="img-fluid figure-img"></p>
+<figcaption>Offender Race Distribution</figcaption>
 </figure>
 </div>
-<section id="key-insight-1" class="level4">
-<h4 class="anchored" data-anchor-id="key-insight-1">Key Insight:</h4>
-<ul>
-<li><p><strong>Offenders</strong>: The most common age group among offenders is <strong>20–29</strong>, followed by <strong>30–39</strong>. This indicates that younger adults are more likely to be involved in criminal activities.</p></li>
-<li><p><strong>Victims</strong>: Victimization also peaks in the <strong>20–29</strong> age group, suggesting a strong overlap between the ages of offenders and victims. This may reflect social or environmental factors influencing both offending and victimization patterns.</p></li>
-</ul>
+<p>The data shows a disproportionate number of offenders identified as Black or African American and White, raising questions about socio-economic influences and systemic factors. A large number of “Not Specified” and “Unknown” entries also point to gaps in data collection, emphasizing the need for improved reporting practices to support more accurate analysis and intervention.</p>
 </section>
-</section>
-<section id="ethnicities-of-the-offenders-vs-victims" class="level3">
-<h3 class="anchored" data-anchor-id="ethnicities-of-the-offenders-vs-victims"><em>3. Ethnicities of the Offenders vs Victims</em></h3>
-<p>The charts below compare the ethnicities of offenders and victims to reveal potential patterns of racial disparities in criminal incidents.</p>
-<div class="quarto-figure quarto-figure-left">
+<section id="victim-race-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="victim-race-distribution"><em>Victim Race Distribution</em></h2>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/newplot%20(1).png" class="img-fluid figure-img" width="500"></p>
-<figcaption>Ethnicties of the Offenders</figcaption>
+<p><img src="plot4.png" class="img-fluid figure-img"></p>
+<figcaption>Victim Race Distribution</figcaption>
 </figure>
 </div>
-<div class="quarto-figure quarto-figure-left">
+<p>White individuals are the most frequently reported victims, followed by Black or African American individuals, though with a substantial gap between the two. The presence of “Unknown” and “Not Specified” categories signals incomplete data, limiting a full understanding of victimization trends. More precise data collection is essential for targeted crime prevention and community support.</p>
+</section>
+<section id="crime-trends-over-time" class="level2">
+<h2 class="anchored" data-anchor-id="crime-trends-over-time"><em>Crime Trends Over Time</em></h2>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/newplot%20(11).png" class="img-fluid quarto-figure quarto-figure-left figure-img" width="500"></p>
+<p><img src="plot3.png" class="img-fluid figure-img"></p>
+<figcaption>Crime Trends Over Time</figcaption>
 </figure>
 </div>
-<section id="key-insight-2" class="level4">
-<h4 class="anchored" data-anchor-id="key-insight-2">Key Insight:</h4>
-<ul>
-<li>The majority of both <strong>offenders</strong> and <strong>victims</strong> are categorized as <strong>non-Hispanic and non-Latino</strong>. This suggests that ethnic groups outside of the Hispanic/Latino community are more frequently involved in criminal incidents. Further analysis is needed to explore the sociocultural and systemic factors behind these patterns.</li>
-</ul>
-</section>
-</section>
-<section id="races-of-offenders-vs-victims" class="level3">
-<h3 class="anchored" data-anchor-id="races-of-offenders-vs-victims">4. <em>Races of Offenders vs Victims</em></h3>
-<p>This analysis explores the racial distribution of offenders and victims, investigating whether race-related disparities are present.</p>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="images/newplot%20(7).png" class="img-fluid quarto-figure quarto-figure-left figure-img" width="500"></p>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="images/newplot%20(8)-2.png" class="img-fluid quarto-figure quarto-figure-left figure-img" width="500"></p>
-</figure>
-</div>
-<section id="key-insight-3" class="level4">
-<h4 class="anchored" data-anchor-id="key-insight-3">Key Insight:</h4>
-<ul>
-<li><p><strong>Offenders</strong>: Both <strong>White</strong> and <strong>African American</strong> individuals are most commonly represented among offenders, highlighting possible broader societal and economic influences.</p></li>
-<li><p><strong>Victims</strong>: <strong>White</strong> individuals appear to be more frequently victimized, suggesting potential interactions between race, geographic location, and social dynamics. This warrants further investigation into how systemic factors contribute to these disparities.</p></li>
-</ul>
-</section>
-</section>
-<section id="types-of-offenses-committed" class="level3">
-<h3 class="anchored" data-anchor-id="types-of-offenses-committed"><em>5. Types of Offenses Committed</em></h3>
-<p>This chart categorizes the types of offenses involved in the reported incidents, giving us a detailed breakdown of criminal activity.</p>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="images/newplot%20(4).png" class="img-fluid quarto-figure quarto-figure-left figure-img" width="500"></p>
-</figure>
-</div>
-<section id="key-insight-4" class="level4">
-<h4 class="anchored" data-anchor-id="key-insight-4">Key Insight:</h4>
-<ul>
-<li><strong>Property destruction</strong> is the most prevalent offense, followed by <strong>simple assaults</strong>, <strong>breaking and entering</strong>, and <strong>drug-related crimes</strong>. This breakdown provides a clearer picture of the types of criminal activities most commonly occurring in these incidents.</li>
-</ul>
-</section>
-</section>
-<section id="weapons-used" class="level3">
-<h3 class="anchored" data-anchor-id="weapons-used"><em>6. Weapons Used</em></h3>
-<p>The following chart provides an overview of the types of weapons used during criminal incidents, offering valuable insights into the role of weaponry in violent crime.</p>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="images/newplot%20(5).png" class="img-fluid quarto-figure quarto-figure-left figure-img" width="500"></p>
-</figure>
-</div>
-<section id="key-insight-5" class="level4">
-<h4 class="anchored" data-anchor-id="key-insight-5">Key Insight:</h4>
-<ul>
-<li><strong>Personal weapons</strong> (hands, fists, etc.) are the most frequently used in incidents, followed by <strong>firearms</strong> and <strong>knives</strong>. The prominence of physical altercations emphasizes the need for preventive measures around conflict de-escalation, while the prevalence of firearms and knives highlights the importance of effective weapon control.</li>
-</ul>
-</section>
-</section>
-<section id="relationship-between-offenders-and-victims" class="level3">
-<h3 class="anchored" data-anchor-id="relationship-between-offenders-and-victims"><em>7. Relationship Between Offenders and Victims</em></h3>
-<p>This chart examines the relationship dynamics between offenders and victims, uncovering patterns in how these relationships might influence criminal behavior.</p>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="images/newplot%20(6).png" class="img-fluid quarto-figure quarto-figure-left figure-img" width="500"></p>
-</figure>
-</div>
-<section id="key-insight-6" class="level4">
-<h4 class="anchored" data-anchor-id="key-insight-6">Key Insight:</h4>
-<ul>
-<li>The most common relationship between offenders and victims is that of <strong>strangers</strong>, where no prior connection exists between the parties. Other significant relationships include <strong>boyfriends/girlfriends</strong>, <strong>friends</strong>, <strong>spouses</strong>, and <strong>acquaintances</strong>. This indicates a range of scenarios, from random violence to incidents stemming from interpersonal conflicts.</li>
-</ul>
-</section>
-</section>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion"><em>Conclusion</em></h2>
-<p>This analysis uncovers several critical patterns in criminal activity related to gun violence. Key findings include:</p>
-<ul>
-<li><p>Younger individuals, particularly in their 20s and 30s, are more likely to be involved both as offenders and victims.</p></li>
-<li><p>The most common offenses involve property destruction, assaults, and drug-related crimes.</p></li>
-<li><p>Both <strong>White</strong> and <strong>African American</strong> individuals are most commonly represented among offenders, while <strong>White</strong> individuals are more frequently victimized.</p></li>
-<li><p><strong>Personal weapons</strong> and <strong>firearms</strong> are the most common weapons used in violent incidents.</p></li>
-</ul>
-<p>These insights are crucial for understanding the social dynamics behind gun violence. By further exploring these trends and integrating additional datasets, law enforcement agencies and policymakers can make more informed decisions about crime prevention, resource allocation, and public safety initiatives.</p>
+<p>Property crimes, particularly vandalism, dominate this crime landscape, forming a “long tail” distribution where a few offenses are highly prevalent while others occur infrequently. While addressing property damage is a priority, law enforcement must also be prepared to tackle a diverse range of lesser-reported crimes. Understanding the factors driving both common and rare offenses is key to effective crime prevention in the city.</p>
 </section>
 </section>
 
